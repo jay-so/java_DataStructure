@@ -1,10 +1,11 @@
 package part1;
 
-//+와 -를 번갈아 출력(2)
+
+//+와 -를 번갈아 출력(1)
 
 import java.util.Scanner;
 
-public class Alternative2 {
+public class Alternative1 {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
         int n;
@@ -15,11 +16,11 @@ public class Alternative2 {
         System.out.print("n의 값:" );
         n = sc.nextInt();
 
-        for(int i = 0;i<n/2;i++){
-            System.out.print("+-");
-        }
-        if(n%2 !=0){
-            System.out.print("+");
-        }
+        for(int i = 0; i<n;i++)
+            if(i %2 ==0) //짝수
+                System.out.print("+");
+            else{ //홀수
+                System.out.print("-");
+            }
     }
 }

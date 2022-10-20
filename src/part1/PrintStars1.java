@@ -1,9 +1,10 @@
 package part1;
 
+//*를 n개 출력하되 w개마다 줄 바꿈(1)
+
 import java.util.Scanner;
 
-//*를 n개 출력하되 w개마다 줄 바꿈(2)
-public class PrintStar2 {
+public class PrintStars1 {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
         int n,w;
@@ -20,13 +21,12 @@ public class PrintStar2 {
             w = sc.nextInt();
         }while (w<=0||w>n);
 
-        for(int i = 0;i<n/w;i++) {
-            System.out.println("*".repeat(w));
+        for(int i = 0;i<n;i++){
+            System.out.print("*");
+            if(i%w == w-1)
+                System.out.println(); //줄 바꿈
         }
-        int rest = n%w;
-        if(rest!=0){
-            System.out.println("*".repeat(rest));
-        }
-
+        if(n %w !=0)
+            System.out.println(); //줄 바꿈
     }
 }
